@@ -72,11 +72,9 @@ const CreatePost = () => {
             const response = await axios.get(`${process.env.REACT_APP_BACKENDURL}/userInfo`);
             if (response.status !== 200) {
                 setLogin(false);
-              navigate('/login');
             }
           } catch (error) {
             console.log('error an error occured');
-            navigate('/login');
 
           }
         }

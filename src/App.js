@@ -15,6 +15,7 @@ import Page404 from './pages/Page404';
 import UpdatePost from './pages/Edit';
 import { MenuContextProvider } from './context/MenuBarContext';
 import {UserContextProvider} from './context/user';
+import ScrollToTop from './components/Sroll';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <UserContextProvider>
       <MenuContextProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
