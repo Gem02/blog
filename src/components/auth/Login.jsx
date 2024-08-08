@@ -21,7 +21,7 @@ const Login = () => {
         e.preventDefault();
         setLoader(true);
         try {
-            const response = await axios.post(`${process.env.REACT_APP_BACKENDURL}/login`, {email, password});
+            const response = await axios.post(`${process.env.REACT_APP_BACKENDURL}/login`, {email, password}, {withCredentials: true});
            
             if(response.data.login){
                setLogin(true);

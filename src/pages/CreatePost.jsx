@@ -114,6 +114,8 @@ const CreatePost = () => {
                 alert('Sorry post was not created')
                 return;
             }
+        } else{
+            alert('please add image');
         }
 
         try {
@@ -213,7 +215,7 @@ const CreatePost = () => {
 
                         <div className="flex flex-col">
                             <label className="text-orange-600 text-sm font-semibold" htmlFor="image">Post image</label>
-                            <input type="file" onChange={(e) => setImage(e.target.files[0])} />
+                            <input type="file" onChange={(e) => setImage(e.target.files[0])} required />
                             <p className='bg-orange-100 text-orange-600 p-2 text-xs mt-2'><strong className='mr-2'>Note:</strong>Please add an image of less then 4mb </p>
                         </div>
 
