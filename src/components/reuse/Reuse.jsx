@@ -14,13 +14,7 @@ const Mainbanner = ({Image, Tagname, Text, Author, Date}) => {
   )
 }
 
-const Tags = () =>{
-    return (
-        <div>
-            <p>hi</p>
-        </div>
-    )
-}
+
 
 const Heading = ({Name}) =>{
     return (
@@ -104,4 +98,4 @@ const Avater = ({avaImage, avaName, avaData}) =>{
     )
 }
 
-export {Mainbanner, Tags, Heading, FullCard, SmPost, HeadingCard, SideCard, TrendingBox, Avater}
+export {Mainbanner, Heading, FullCard, SmPost, HeadingCard, SideCard, TrendingBox, Avater}

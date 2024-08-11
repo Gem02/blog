@@ -21,7 +21,7 @@ const Home = () => {
         try {
             const result = await axios.get(`${process.env.REACT_APP_BACKENDURL}/sponsordPost`);
             setsponsordPost(result.data);
-            setLoader(false);
+           setLoader(false);
         } catch (error) {
             console.log('error fetching data');
             setLoader(false);
@@ -32,10 +32,10 @@ const Home = () => {
         try {
             const result = await axios.get(`${process.env.REACT_APP_BACKENDURL}/featuresPost`);
             setFeaturedPosts(result.data);
-            setLoader(false);
+           setLoader(false);
         } catch (error) {
             console.log('error fetching data');
-            setLoader(false);
+           setLoader(false);
         }
     }
 
@@ -101,17 +101,20 @@ const Home = () => {
     <div className='py-2 px-28 lg:px-5 overflow-hidden'>
         {
             loader?
+
+            <div className='w-full flex items-center justify-center h-dvh'>
         
-            <RotatingLines
-                visible={loader}
-                height="50"
-                width="50"
-                color="red"
-                strokeWidth="5"
-                animationDuration="0.75"
-                className= "mt-20"
-                ariaLabel="rotating-lines-loading"
-            />
+                <RotatingLines
+                    visible={loader}
+                    height="50"
+                    width="50"
+                    color="red"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    ariaLabel="rotating-lines-loading"
+                />
+
+            </div>
 
         :
             <div>

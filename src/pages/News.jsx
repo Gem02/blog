@@ -10,7 +10,7 @@ const News = () => {
   const [posts, setPosts] = useState([]);
   const [page, setPages] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [loader, setLoader] = useState(false);
+  const [loader, setLoader] = useState(true);
 
   const handlePreviousPage = () =>{
     if(page > 1){
@@ -29,7 +29,6 @@ const News = () => {
   }
 
   useEffect(() =>{
-      setLoader(true);
       const fetchPost = async () =>{
           try {
               const response = await axios.get(`${process.env.REACT_APP_BACKENDURL}/getPosts?page=${page}&limit=6`);
