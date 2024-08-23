@@ -134,7 +134,7 @@ const Home = () => {
                         <CgArrowRightR color='gray' className='cursor-pointer size-7 sm:size-5' onClick={increase}/>
                     </div>
                 </div>
-                <div className='grid grid-cols-3 gap-5 mt-4 md:block '>
+                <div className='grid grid-cols-3 gap-5 mt-4 md:block'>
                     <div className='col-span-2'>
                         <div>
                             <Link to={`/post/${sponsordPost[0]?._id}`}> <Mainbanner 
@@ -195,29 +195,6 @@ const Home = () => {
                                 })
                             }
                             </div>
-                        </div>
-
-                        <div className='flex items-center justify-between relative'>
-                            <div className='w-full'><Heading Name={'Latest Post'}/></div>
-                        </div>
-
-                        <div className='flex gap-6 mt-4'>
-
-                            <HeadingCard 
-                                HAuthor={posts[0]?.posterDetails.author} 
-                                HDate={formatDate(posts[0]?.datePosted)} 
-                                HImage={posts[0]?.imageUrl} 
-                                HHeading={posts[0]?.title} 
-                                redirect={posts[0]?._id}
-                            />
-                            <HeadingCard 
-                                HAuthor={posts[1]?.posterDetails.author} 
-                                HDate={formatDate(posts[1]?.datePosted)} 
-                                HImage={posts[1]?.imageUrl} 
-                                HHeading={posts[1]?.title} 
-                                redirect={posts[1]?._id}
-                            /> 
-
                         </div>
 
                         <div className=' mt-10'>
